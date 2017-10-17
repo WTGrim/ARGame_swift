@@ -39,7 +39,7 @@ class ViewController: UIViewController , ARSCNViewDelegate, SCNPhysicsContactDel
     
     @IBAction func didTapScreen(_ sender: UITapGestureRecognizer) {
         //点击发射子弹
-//        arscnView.shotBullet()
+        arscnView.shotBullet()
     }
     
     func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
