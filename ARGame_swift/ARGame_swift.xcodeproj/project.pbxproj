@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D6390991F95F5B500984E95 /* NewBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6390981F95F5B500984E95 /* NewBullet.swift */; };
 		5DB4B8F61F959F7F003164D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB4B8F51F959F7F003164D3 /* AppDelegate.swift */; };
 		5DB4B8F81F959F7F003164D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB4B8F71F959F7F003164D3 /* ViewController.swift */; };
 		5DB4B8FB1F959F7F003164D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB4B8F91F959F7F003164D3 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D6390981F95F5B500984E95 /* NewBullet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBullet.swift; sourceTree = "<group>"; };
 		5DB4B8F21F959F7F003164D3 /* ARGame_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARGame_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB4B8F51F959F7F003164D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DB4B8F71F959F7F003164D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				5DB4B92B1F95CAFC003164D3 /* NewShip.swift */,
+				5D6390981F95F5B500984E95 /* NewBullet.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DB4B92C1F95CAFC003164D3 /* NewShip.swift in Sources */,
+				5D6390991F95F5B500984E95 /* NewBullet.swift in Sources */,
 				5DB4B8F81F959F7F003164D3 /* ViewController.swift in Sources */,
 				5DB4B9291F95AD3C003164D3 /* Masks.swift in Sources */,
 				5DB4B9251F95A846003164D3 /* Ship.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 import ARKit
 import SceneKit
 
-class ViewController: UIViewController , ARSCNViewDelegate{
+class ViewController: UIViewController , ARSCNViewDelegate, SCNPhysicsContactDelegate{
 
     @IBOutlet weak var arscnView: ARSCNView!
     
@@ -35,9 +35,21 @@ class ViewController: UIViewController , ARSCNViewDelegate{
         config.isLightEstimationEnabled = true
         arscnView.session.run(config)
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    
+    @IBAction func didTapScreen(_ sender: UITapGestureRecognizer) {
+        //点击发射子弹
+//        arscnView.shotBullet()
+    }
+    
+    func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
+        
+        print("击中目标")
+        contact.nodeA.removeFromParentNode()
+        contact.nodeB.removeFromParentNode()
+        arscnView.addShip()
+        
+        
     }
 
 }

@@ -15,11 +15,20 @@ extension ARSCNView{
     func addShip(){
         
         let ship = Ship()
-        let x = 0.2
-        let y = 0.3
-        let z = -1.0
+        let x = -0.5.random(end: 0.5)//产生-0.5到0.5的随机数
+        let y = -0.5.random(end: 0.5)
         
-        ship.position = SCNVector3(x, y, z)
+        ship.position = SCNVector3(x, y, -1)
         self.scene.rootNode.addChildNode(ship)
+    }
+}
+
+
+extension Double{
+    
+    func random(end:Double) -> Float {
+        
+        let factor = Double(arc4random()) / Double(UInt32.max)
+        return Float(end - factor * (end  - self))
     }
 }

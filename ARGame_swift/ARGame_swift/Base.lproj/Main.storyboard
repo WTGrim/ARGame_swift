@@ -35,6 +35,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qbE-CQ-cHF">
+                    <connections>
+                        <action selector="didTapScreen:" destination="BYZ-38-t0r" id="4ps-Rp-bJY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
