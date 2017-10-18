@@ -45,12 +45,27 @@ class ViewController: UIViewController , ARSCNViewDelegate, SCNPhysicsContactDel
     func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
         
         print("击中目标")
-        contact.nodeA.removeFromParentNode()
-        contact.nodeB.removeFromParentNode()
-        arscnView.addShip()
-        
+        removeNodeDynamic(node: contact.nodeB, isExplode: false)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.removeNodeDynamic(node: contact.nodeA, isExplode: true)
+            self.arscnView.addShip()
+        }
         
     }
-
+    
+    func removeNodeDynamic(node : SCNNode, isExplode : Bool)  {
+        
+        playSound(of: .collision)
+        
+        if isExplode {
+            playSound(of: .explosion)
+            let ps = SCNParticleSystem(named: "explosion", inDirectory: nil)
+            let psNode = SCNNode()
+            psNode.addParticleSystem(ps!)
+            arscnView.scene.rootNode.addChildNode(psNode)
+        }
+        
+        node.removeFromParentNode()
+    }
 }
 
