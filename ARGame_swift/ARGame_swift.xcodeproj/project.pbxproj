@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02528EFA1FC5B38600DBAB52 /* music in Resources */ = {isa = PBXBuildFile; fileRef = 02528EF91FC5B38600DBAB52 /* music */; };
 		5D6390991F95F5B500984E95 /* NewBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6390981F95F5B500984E95 /* NewBullet.swift */; };
 		5DA052831F96F85400D9C3E0 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA052821F96F85400D9C3E0 /* PlaySound.swift */; };
 		5DB4B8F61F959F7F003164D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB4B8F51F959F7F003164D3 /* AppDelegate.swift */; };
@@ -40,12 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02528EF91FC5B38600DBAB52 /* music */ = {isa = PBXFileReference; lastKnownFileType = folder; path = music; sourceTree = "<group>"; };
 		5D6390981F95F5B500984E95 /* NewBullet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBullet.swift; sourceTree = "<group>"; };
-		5D63909B1F95FF8A00984E95 /* collision.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = collision.mp3; sourceTree = "<group>"; };
-		5D63909C1F95FF8A00984E95 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
-		5D63909D1F95FF8A00984E95 /* explosion.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = explosion.scnp; sourceTree = "<group>"; };
-		5D63909E1F95FF8A00984E95 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
-		5D63909F1F95FF8A00984E95 /* torpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = torpedo.mp3; sourceTree = "<group>"; };
 		5DA052821F96F85400D9C3E0 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		5DB4B8F21F959F7F003164D3 /* ARGame_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARGame_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB4B8F51F959F7F003164D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,18 +88,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D63909A1F95FF8A00984E95 /* music */ = {
-			isa = PBXGroup;
-			children = (
-				5D63909B1F95FF8A00984E95 /* collision.mp3 */,
-				5D63909C1F95FF8A00984E95 /* explosion.mp3 */,
-				5D63909D1F95FF8A00984E95 /* explosion.scnp */,
-				5D63909E1F95FF8A00984E95 /* spark.png */,
-				5D63909F1F95FF8A00984E95 /* torpedo.mp3 */,
-			);
-			path = music;
-			sourceTree = "<group>";
-		};
 		5DB4B8E91F959F7F003164D3 = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +111,7 @@
 		5DB4B8F41F959F7F003164D3 /* ARGame_swift */ = {
 			isa = PBXGroup;
 			children = (
-				5D63909A1F95FF8A00984E95 /* music */,
+				02528EF91FC5B38600DBAB52 /* music */,
 				5DB4B92A1F95CADF003164D3 /* Others */,
 				5DB4B9231F95A82A003164D3 /* Model */,
 				5DB4B8F51F959F7F003164D3 /* AppDelegate.swift */,
@@ -286,6 +271,7 @@
 			files = (
 				5DB4B9001F959F7F003164D3 /* LaunchScreen.storyboard in Resources */,
 				5DB4B8FD1F959F7F003164D3 /* Assets.xcassets in Resources */,
+				02528EFA1FC5B38600DBAB52 /* music in Resources */,
 				5DB4B8FB1F959F7F003164D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +473,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 624TUL8XMA;
 				INFOPLIST_FILE = ARGame_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Dwt.ARGame-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -502,6 +489,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 624TUL8XMA;
 				INFOPLIST_FILE = ARGame_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Dwt.ARGame-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";

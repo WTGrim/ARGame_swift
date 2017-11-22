@@ -15,8 +15,8 @@ extension ARSCNView{
     func addShip(){
         
         let ship = Ship()
-        let x = -0.5.random(end: 0.5)//产生-0.5到0.5的随机数
-        let y = -0.5.random(end: 0.5)
+        let x = (-0.5).random(end: 0.5)//产生-0.5到0.5的随机数
+        let y = (-0.5).random(end: 0.5)
         
         ship.position = SCNVector3(x, y, -1)
         self.scene.rootNode.addChildNode(ship)

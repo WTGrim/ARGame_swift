@@ -18,13 +18,13 @@ class ViewController: UIViewController , ARSCNViewDelegate, SCNPhysicsContactDel
         super.viewDidLoad()
         
         let scene = SCNScene()
+        scene.physicsWorld.contactDelegate = self;
         arscnView.scene = scene
-        arscnView.delegate = self
         arscnView.showsStatistics = true
-        
-        //启动完成后添加
+        arscnView.delegate = self
+        arscnView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(didTapScreen(_:))))
+        //启动完成后添加飞船
         arscnView.addShip()
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -37,15 +37,17 @@ class ViewController: UIViewController , ARSCNViewDelegate, SCNPhysicsContactDel
     }
 
     
-    @IBAction func didTapScreen(_ sender: UITapGestureRecognizer) {
-        //点击发射子弹
-        arscnView.shotBullet()
+    @objc func didTapScreen(_ sender: UITapGestureRecognizer) {
+        //点击屏幕发射子弹
+        arscnView.shootBullet()
+        playSound(of: .torpedo)
     }
     
     func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
+        print("击中")
         
-        print("击中目标")
         removeNodeDynamic(node: contact.nodeB, isExplode: false)
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.removeNodeDynamic(node: contact.nodeA, isExplode: true)
             self.arscnView.addShip()
@@ -53,16 +55,18 @@ class ViewController: UIViewController , ARSCNViewDelegate, SCNPhysicsContactDel
         
     }
     
-    func removeNodeDynamic(node : SCNNode, isExplode : Bool)  {
-        
+    func removeNodeDynamic(node: SCNNode, isExplode: Bool)  {
         playSound(of: .collision)
         
         if isExplode {
             playSound(of: .explosion)
-            let ps = SCNParticleSystem(named: "explosion", inDirectory: nil)
-            let psNode = SCNNode()
-            psNode.addParticleSystem(ps!)
-            arscnView.scene.rootNode.addChildNode(psNode)
+            
+            let ps = SCNParticleSystem(named: "explosion", inDirectory: "music")
+            let psnode = SCNNode()
+            psnode.addParticleSystem(ps!)
+            
+            psnode.position = node.position
+            arscnView.scene.rootNode.addChildNode(psnode)
         }
         
         node.removeFromParentNode()

@@ -9,8 +9,7 @@
 
 
 struct Masks: OptionSet {
-    
     let rawValue: Int
-    static let ship = Masks(rawValue: 1 << 0)
+    static let ship   = Masks(rawValue: 1 << 0)
     static let bullet = Masks(rawValue: 1 << 1)
 }
