@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0206D8421FC6B9F700D1B870 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		02528EF91FC5B38600DBAB52 /* music */ = {isa = PBXFileReference; lastKnownFileType = folder; path = music; sourceTree = "<group>"; };
 		5D6390981F95F5B500984E95 /* NewBullet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBullet.swift; sourceTree = "<group>"; };
 		5DA052821F96F85400D9C3E0 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
@@ -88,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0206D8411FC6B9F700D1B870 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0206D8421FC6B9F700D1B870 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5DB4B8E91F959F7F003164D3 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +104,7 @@
 				5DB4B9091F959F7F003164D3 /* ARGame_swiftTests */,
 				5DB4B9141F959F80003164D3 /* ARGame_swiftUITests */,
 				5DB4B8F31F959F7F003164D3 /* Products */,
+				0206D8411FC6B9F700D1B870 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -471,11 +481,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 624TUL8XMA;
+				DEVELOPMENT_TEAM = WFDNA43JWP;
 				INFOPLIST_FILE = ARGame_swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Dwt.ARGame-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fineexcd.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -487,11 +497,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 624TUL8XMA;
+				DEVELOPMENT_TEAM = WFDNA43JWP;
 				INFOPLIST_FILE = ARGame_swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Dwt.ARGame-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fineexcd.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

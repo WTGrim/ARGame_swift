@@ -25,7 +25,7 @@ class Bullet: SCNNode {
         self.physicsBody?.contactTestBitMask = Masks.ship.rawValue
         
         let material = SCNMaterial()
-        material.diffuse.contents = #imageLiteral(resourceName: "bullet")
+        material.diffuse.contents = #imageLiteral(resourceName: "haha")
         
         self.geometry?.materials = [material]
     }
