@@ -13,10 +13,14 @@ func playSound(of effect: SoundEffects) {
     
     OperationQueue.main.addOperation {
         let player : AVAudioPlayer!
-        if let url = Bundle.main.url(forResource: effect.rawValue, withExtension: "mp3"){
+        if let url = Bundle.main.url(forResource: effect.rawValue, withExtension: "mp3", subdirectory: "music"){
             player = try? AVAudioPlayer(contentsOf: url)
             player.play()
         }
+//        if let url = Bundle.main.url(forResource: effect.rawValue, withExtension: "mp3"){
+//            player = try? AVAudioPlayer(contentsOf: url)
+//            player.play()
+//        }
     }
     
 }
